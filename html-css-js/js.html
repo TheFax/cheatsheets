@@ -1,0 +1,29 @@
+<script>
+    //Definizione di una variabile
+    var x = 1;
+    
+    //Blocco IF
+    if (x === 1) {
+        console.log(x);
+    }
+    
+    //Funzione
+    function funzione_da_richiamare() {
+        console.log('Eseguita richiesta: ' + Date() );
+    }
+    
+    //Richiedo dei dati da uno script o da un'altra pagina
+    function wget_via_javascript() {
+        var request = new XMLHttpRequest();
+        request.open('GET', 'pagina.php', true);
+        request.onload = function() {
+                console.log('Ricevuta risposta: ' + this.response);
+        }
+        request.send();
+        console.log( Date() + ' - Eseguita richiesta.' );
+    }
+    
+    //Richiamo automatico di una funzione
+    setInterval(funzione_da_richiamare, 1000);  //La funzione sarà richiamata ogni 1000ms, infinite volte
+    setInterval(funzione_da_richiamare, 1000, Param1, Param2);   //Se la funzione ha parametri, vanno specificati così
+</script>
