@@ -1,3 +1,14 @@
+Credit titoli ascii: http://patorjk.com/software/taag/#p=display&f=Big&t=Cookies%0A
+
+
+
+  __  __       _   _                          _   _          
+ |  \/  |     | | | |                        | | (_)         
+ | \  / | __ _| |_| |__   ___ _ __ ___   __ _| |_ _  ___ ___ 
+ | |\/| |/ _` | __| '_ \ / _ \ '_ ` _ \ / _` | __| |/ __/ __|
+ | |  | | (_| | |_| | | |  __/ | | | | | (_| | |_| | (__\__ \
+ |_|  |_|\__,_|\__|_| |_|\___|_| |_| |_|\__,_|\__|_|\___|___/
+                                                             
 //OPERATORI:
 $a ** $b 	Exponentiation
 $a % $b 	Modulo
@@ -19,6 +30,17 @@ $a++	 	Post-increment
 ++$a 		Pre-increment
 --$a 		Pre-decrement
 $a-- 		Post-decrement
+
+	
+
+  _                 _      
+ | |               (_)     
+ | |     ___   __ _ _  ___ 
+ | |    / _ \ / _` | |/ __|
+ | |___| (_) | (_| | | (__ 
+ |______\___/ \__, |_|\___|
+               __/ |       
+              |___/        
 
 //LOGICAL OPERATORS:
 $a and $b   And 	TRUE if both $a and $b are TRUE.
@@ -45,15 +67,84 @@ $value = @$cache[$key];
 
 */
 
+
+
+  _____                  _          
+ |  __ \                (_)         
+ | |__) |___  __ _ _   _ _ _ __ ___ 
+ |  _  // _ \/ _` | | | | | '__/ _ \
+ | | \ \  __/ (_| | |_| | | | |  __/
+ |_|  \_\___|\__, |\__,_|_|_|  \___|
+                | |                 
+                |_|                 
 <?php
-require 'another.php';
+require('another.php');
+require_once('config.php');
+
+
+                                
+     /\                         
+    /  \   _ __ _ __ __ _ _   _ 
+   / /\ \ | '__| '__/ _` | | | |
+  / ____ \| |  | | | (_| | |_| |
+ /_/    \_\_|  |_|  \__,_|\__, |
+                           __/ |
+                          |___/ 
 
 foreach ($array as $elemento_array) {
 	$elemento_array=1;
 }
 
-echo "Hai passato l'elemento POST id uguale a: " . $_POST['id'] ;
 
+
+   _____ ______ _______          _____   ____   _____ _______ 
+  / ____|  ____|__   __|        |  __ \ / __ \ / ____|__   __|
+ | |  __| |__     | |      ___  | |__) | |  | | (___    | |   
+ | | |_ |  __|    | |     / _ \ |  ___/| |  | |\___ \   | |   
+ | |__| | |____   | |    |  __/ | |    | |__| |____) |  | |   
+  \_____|______|  |_|     \___| |_|     \____/|_____/   |_|   
+                                                              
+echo "Hai passato l'elemento POST id uguale a: " . $_POST['id'] ;
+echo "Hai passato l'elemento GET quantity uguale a: " . $_GET['quantity'] ;
+
+
+	
+
+
+   _____            _    _           
+  / ____|          | |  (_)          
+ | |     ___   ___ | | ___  ___  ___ 
+ | |    / _ \ / _ \| |/ / |/ _ \/ __|
+ | |___| (_) | (_) |   <| |  __/\__ \
+  \_____\___/ \___/|_|\_\_|\___||___/
+                                     
+//Imposto un cookie...
+$cookie_name = "user";
+$cookie_value = "John Doe";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+//Leggo un cookie...
+$cookie_name = "user";
+if(isset($_COOKIE[$cookie_name])) {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name];
+} else {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+}
+	
+//Elimino un cookie...
+$cookie_name = "user";
+setcookie($cookie_name, "", time() - 3600);	//Imposto una scadenza negativa (1 ora fa)
+
+
+
+   _____         _ _       _     
+  / ____|       (_) |     | |    
+ | (_____      ___| |_ ___| |__  
+  \___ \ \ /\ / / | __/ __| '_ \ 
+  ____) \ V  V /| | || (__| | | |
+ |_____/ \_/\_/ |_|\__\___|_| |_|
+                                 
 switch ($cibo) {
 	case "Pasta":
     	$contenuto = "Carboidrati";
@@ -61,14 +152,32 @@ switch ($cibo) {
     case "Vino":
         $contenuto = "Alcool";
         break;
- 	default:
+    default:
         $contenuto = "Sconosciuto";
 }
 
+
+
+  _____        _       
+ |  __ \      | |      
+ | |  | | __ _| |_ ___ 
+ | |  | |/ _` | __/ _ \
+ | |__| | (_| | ||  __/
+ |_____/ \__,_|\__\___|
+                       
 $now = date("d-m-Y H:i:s");
 echo $now;
 
 
+
+  _  __ 
+ (_)/ _|
+  _| |_ 
+ | |  _|
+ | | |  
+ |_|_|  
+        
+        
 if ($numero < 12) {
     echo "Have a good morning!";
 } elseif ($numero = 12) {
@@ -76,6 +185,18 @@ if ($numero < 12) {
 } else {
     echo "Have a good afternoon!";
 }
+
+
+
+
+  _                    __            _       _     
+ | |                  / /           | |     | |    
+ | |_ _ __ _   _     / /    ___ __ _| |_ ___| |__  
+ | __| '__| | | |   / /    / __/ _` | __/ __| '_ \ 
+ | |_| |  | |_| |  / /    | (_| (_| | || (__| | | |
+  \__|_|   \__, | /_/      \___\__,_|\__\___|_| |_|
+            __/ |                                  
+           |___/                                   
 
 try { 
 	print "Try block\n";
@@ -90,9 +211,17 @@ try {
 -finally is used to clean up data/resources that the current code created/modified, no matter if a problem occurred or not
 */
 
-$output = `ls -al`;
-echo $output; 
 
+
+
+  __  __       _ _   _ _ _                  _        _                 
+ |  \/  |     | | | (_) (_)                | |      (_)                
+ | \  / |_   _| | |_ _| |_ _ __   ___   ___| |_ _ __ _ _ __   __ _ ___ 
+ | |\/| | | | | | __| | | | '_ \ / _ \ / __| __| '__| | '_ \ / _` / __|
+ | |  | | |_| | | |_| | | | | | |  __/ \__ \ |_| |  | | | | | (_| \__ \
+ |_|  |_|\__,_|_|\__|_|_|_|_| |_|\___| |___/\__|_|  |_|_| |_|\__, |___/
+                                                              __/ |    
+                                                             |___/     
 $str = <<<EOD
 Example of string
 spanning multiple lines
@@ -101,6 +230,15 @@ EOD;
 
 ?>
 
+
+
+  ______ _ _        _            _    
+ |  ____(_) |      | |          | |   
+ | |__   _| | ___  | | ___   ___| | __
+ |  __| | | |/ _ \ | |/ _ \ / __| |/ /
+ | |    | | |  __/ | | (_) | (__|   < 
+ |_|    |_|_|\___| |_|\___/ \___|_|\_\
+                                      
 //FILE LOCK EXAMPLE
 <?php
   //fopen manual:
@@ -124,6 +262,16 @@ EOD;
 ?>
 
 
+
+
+   _____ _               
+  / ____| |              
+ | |    | | __ _ ___ ___ 
+ | |    | |/ _` / __/ __|
+ | |____| | (_| \__ \__ \
+  \_____|_|\__,_|___/___/
+                         
+                         
 //CLASS EXAMPLE
 <?php
 class foo
