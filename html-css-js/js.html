@@ -1,3 +1,43 @@
+//################################################################################
+// SCRIPT PHP che prepara i dati da spedire poi a Javascript via JSON
+//################################################################################
+
+<?php
+//[Dato un array, di nome "elencodati"]
+
+//Preparo una variabile di nome $data...
+$data = array();
+//Dentro $data metto l'array da spedire...
+for ($i = 0; $i <= 100; $i++) {
+    $data[ ($i) ] = elencodati($i);
+}
+//Dentro $data metto anche altri dati...
+$data['POWER'] = $power;
+$data['TEST'] = $test;
+
+//Spedisco il JSON codificato di $data
+echo json_encode($data);
+//echo json_last_error();
+
+//Fine dello script PHP
+?> 
+
+
+
+   ;;;;;
+   ;;;;;
+   ;;;;;
+   ;;;;;
+   ;;;;;
+ ..;;;;;..
+  ':::::'
+    ':`
+
+//################################################################################
+// PARTE CHE ESEGUE LA RICHIESTA E RICEVE LA RISPOSTA (all'interno di un HTML)
+//################################################################################
+
+
 <script>
     function esegui_richiesta() {
     
@@ -14,7 +54,7 @@
                 console.log( Date() + ' - La risposta sembra non essere in formato JSON'); 
             }
             
-            //console.log(data['MA1']);
+            //console.log(data['1']);
             //console.log(data['POWER']);
             //console.log(data);
             
