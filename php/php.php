@@ -31,7 +31,7 @@ $a++	 	Post-increment
 --$a 		Pre-decrement
 $a-- 		Post-decrement
 
-	
+rand($min, $max);  //Random number	
 
   _                 _      
  | |               (_)     
@@ -82,7 +82,18 @@ require('another.php');
 require_once('config.php');
 
 
-                                
+   __           
+  / _|          
+ | |_ ___  _ __ 
+ |  _/ _ \| '__|
+ | || (_) | |   
+ |_| \___/|_|   
+
+for ($i = 1; $i <= 10; $i++) {
+    echo rand(100,150) . '<br>';
+}	
+
+
      /\                         
     /  \   _ __ _ __ __ _ _   _ 
    / /\ \ | '__| '__/ _` | | | |
