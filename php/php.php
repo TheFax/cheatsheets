@@ -106,6 +106,10 @@ foreach ($array as $elemento_array) {
 	$elemento_array=1;
 }
 
+foreach($_POST as $key => $value) {
+  echo "POST parameter '$key' has '$value'";
+}
+
 
 
    _____ ______ _______          _____   ____   _____ _______ 
@@ -272,9 +276,11 @@ EOD;
   echo $x;                // Restituisco all'utente il numero
 ?>
 
+...oppure
+	
+file_put_contents($file, $content, FILE_APPEND | LOCK_EX);
 
-
-
+	
    _____ _               
   / ____| |              
  | |    | | __ _ ___ ___ 
