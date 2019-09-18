@@ -64,6 +64,8 @@ else:
     print('Something else')
 
 
+if a==0 and b==1: # and or !
+    print('si')
 
 
 for i in 'hello':
