@@ -21,13 +21,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 01:01
 
 
-//PHP CODE
-$txt = json_encode($_POST);
-$myfile = fopen("pub/commands.txt", "w") or die("Unable to open command file!");
-fwrite($myfile, $txt);
-fclose($myfile);
-
-
 //PYTHON CODE
 import json
  
