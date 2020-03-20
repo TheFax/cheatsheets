@@ -29,3 +29,20 @@ with open ("/var/www/html/pub/commands.txt", "r") as read_file:
 
 json.dumps(data)
 print (data['commands'])
+
+
+##Esempio di deconding JSON con origine dei dati su URL
+import json
+import requests
+r = requests.get('https://urljson')
+#esempio: [{'ID': '14', 'title': '324', 'content': '345', 'created': '2020-03-20 08:41:52'}, {'ID': '13', 'title': 'Title23222222', 'content': 'sdfgsfdgdsg', 'created': '2020-03-20 08:41:47'}, {'ID': '12', 'title': 'Ur', 'content': 'Ff', 'created': '2020-03-20 01:07:00'}]
+#r.status_code conterrà 200 se la richiesta è andata a buon fine
+#r.text
+#r.json()
+values=json.loads(r.json())
+print(len(values))
+print(values[0]['ID'])
+for x in range(len(values)):
+	print(values[x]['ID'])
+
+
