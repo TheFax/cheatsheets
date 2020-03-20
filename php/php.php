@@ -289,8 +289,15 @@ file_put_contents($file, $content, FILE_APPEND | LOCK_EX);
                              
 ENCODE:	
 $notes = $notes->fetchNotes();
+//Se invio l'header giusto, il browser mi farà vedere il proprio decoder JSON automaticamente :-D
 header("Content-Type: application/json");
-echo json_encode($notes);
+$jsonobj=json_encode($notes);
+//Scrivo su schermo
+echo $jsonobj;
+//Scrivo su file
+$myfile = fopen("pub/commands.txt", "w") or die("Unable to open file!");
+fwrite($myfile, $jsonobj);
+fclose($myfile);
 	
 DECODE:
 $jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
