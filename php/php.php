@@ -280,6 +280,24 @@ EOD;
 	
 file_put_contents($file, $content, FILE_APPEND | LOCK_EX);
 
+       _  _____  ____  _   _ 
+      | |/ ____|/ __ \| \ | |
+      | | (___ | |  | |  \| |
+  _   | |\___ \| |  | | . ` |
+ | |__| |____) | |__| | |\  |
+  \____/|_____/ \____/|_| \_|
+                             
+ENCODE:	
+$notes = $notes->fetchNotes();
+header("Content-Type: application/json");
+echo json_encode($notes);
+	
+DECODE:
+$jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
+$arr = json_decode($jsonobj, true);
+foreach($arr as $key => $value) {
+  echo $key . " => " . $value . "<br>";
+}
 	
    _____ _               
   / ____| |              
