@@ -1,1 +1,0 @@
-Cheatsheet for all
