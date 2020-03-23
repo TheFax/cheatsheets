@@ -1,0 +1,9 @@
+CONFIGURAZIONE INIZIALE:
+git config --global user.name "Mona Lisa"
+
+CLONARE UN REPOSITORY:
+git clone https://github.com/xxxxxx/yyyyyy.git
+(il link https è preso dal bottone verde di github)
+
+
+
