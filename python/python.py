@@ -117,14 +117,14 @@ tupla = ("immutabile", 99, 'start from zero')
 print(tupla[1])
 
 
-lista = ['mutabile', 4, 5.55, 'test', 'start from zero']
+lista = ['mutabile', 8, 5.55, 'test', 'start from zero']
 	#lista[0]           # first element of the list
 	#lista[start:stop]  # items start through stop-1
 	#lista[start:]      # items start through the rest of the array
 	#lista[:stop]       # items from the beginning through stop-1
 	#lista[:]           # a copy of the whole array
-print(lista[1])      #scrive 4
-print(lista.pop(1))  #scrive 4, poi l'elemento viene rimosso
+print(lista[1])      #scrive 8
+print(lista.pop(1))  #scrive 8, poi l'elemento viene rimosso
 lista.append('cucu') #aggiunge l'elemento 'cucu' alla lista
 lista.remove('test') #viene rimosso l'elemento 'test' dalla lista
 
@@ -137,6 +137,9 @@ if 'chiave' in dizionario: print ("si")   #si
 dizionario["new element"] = "red"         #aggiungo alemento "new element" al dizionario
 
 
+print (len(tupla/lista/dizionario))   #scrive il numero di elementi
+
 for x in tupla/lista/dizionario:
-  print(x)
-#per i dizionari sarà stampata la CHIAVE di ogni elemento.
+  print(x) #per i dizionari sarà stampata la CHIAVE di ogni elemento.
+
+del tupla/lista/dizionario    #elimina la variabile liberando memoria
