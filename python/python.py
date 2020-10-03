@@ -74,7 +74,7 @@ for i in 'hello':
 names = ['John','Monica','Steven','Robin']
 for i in names:
     print('Hello ' + i)
-
+##########################################################################################
 for i in range(1,11):  #da 1 a 10 compresi
 	if i == 3:
 		#se i=3, passa direttamente al prossimo ciclo
@@ -82,13 +82,24 @@ for i in range(1,11):  #da 1 a 10 compresi
     if i == 5:
     	#se i=5, ferma completamente il ciclo for
         break
-    print(i) #1, 2, 4
+    print(i)
+#1, 2, 4
+
+
+
 
 digits = [0, 1, 5]
 for i in digits:
-    print(i)
+    print(i, end = ' ')
 else:
-    print("Io funziono solo se non ci sono stati break")
+    print("else fuziona solo se non ci sono stati break")
+#0 1 5 else fuziona solo se non ci sono stati break
+for i in digits:
+    print(i, end = ' ')
+    break
+else:
+    print("else fuziona solo se non ci sono stati break")
+#0
 
 
 
@@ -97,4 +108,35 @@ i = 5
 while(i):
     print(i)
     i = i – 1
-    #5, 4, 3, 2, 1
+#5, 4, 3, 2, 1
+
+
+
+
+tupla = ("immutabile", 99, 'start from zero')
+print(tupla[1])
+
+
+lista = ['mutabile', 4, 5.55, 'test', 'start from zero']
+	#lista[0]           # first element of the list
+	#lista[start:stop]  # items start through stop-1
+	#lista[start:]      # items start through the rest of the array
+	#lista[:stop]       # items from the beginning through stop-1
+	#lista[:]           # a copy of the whole array
+print(lista[1])      #scrive 4
+print(lista.pop(1))  #scrive 4, poi l'elemento viene rimosso
+lista.append('cucu') #aggiunge l'elemento 'cucu' alla lista
+lista.remove('test') #viene rimosso l'elemento 'test' dalla lista
+
+
+dizionario = {1:'mutabile', 44:9988, 'chiave':'valore'}
+print(dizionario['chiave'])               #valore
+print([*dizionario.values()])             #['mutabile', 9988, 'valore']
+print([*dizionario.keys()])               #[1, 44, 'chiave']
+if 'chiave' in dizionario: print ("si")   #si
+dizionario["new element"] = "red"         #aggiungo alemento "new element" al dizionario
+
+
+for x in tupla/lista/dizionario:
+  print(x)
+#per i dizionari sarà stampata la CHIAVE di ogni elemento.
