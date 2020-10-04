@@ -5,7 +5,7 @@ class MyClass:
 	def func(self):
 		print('Hello')
 	def somma(self, argument):
-		return self.a + argument #by fax, da provare
+		return self.a + argument
 		
 # create a new MyClass
 ob = MyClass(4)
