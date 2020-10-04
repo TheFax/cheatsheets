@@ -72,7 +72,7 @@ def reciprocal(num)
     return r
 
 def doing_nothing():
-	"""Descrizione della funzione
+    """Descrizione della funzione
     anche su piu righe.
     Accessibile da doing_nothing.__doc__"""
     pass
@@ -170,3 +170,11 @@ for x in tupla/lista/dizionario:
   print(x) #per i dizionari sarà stampata la CHIAVE di ogni elemento.
 
 del tupla/lista/dizionario    #elimina la variabile liberando memoria
+
+
+#Visualizza tutte i metodi di una libreria
+import random
+x=dir(random)   #magic happens here ;-)
+for y in x:
+    print(y)
+
