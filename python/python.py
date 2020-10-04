@@ -4,10 +4,36 @@ math.cos()
 from math import cos
 cos()
 
+import random
+int_rnd   = random.randint(1,10)  #1   - 10     es: 8
+float_rnd = random.random()       #0.0 - 1.0    es: 0.368355385865348
+float_rnd = random.uniform(5,40)  #5   - 40     es: 12.768667215875203
+
+import time
+time.sleep(0.5)    #wait 0.5 sec
 
 
+#comment
+var = 105
+def modify_var():
+    global var
+    var = var + 1 
+modify_var()
+print(var, sep="", end="!")  #106!
 
-globalvar = 105
+
+** 	Exponent            2 ** 3 = 8
+% 	Modulus/Remainder   22 % 8 = 6
+// 	Integer division    22 // 8 = 2
+/ 	Division            22 / 8 = 2.75
+* 	Multiplication      3 * 3 = 9
+- 	Subtraction         5 - 2 = 3
++ 	Addition            2 + 2 = 4
+and                         (4 == 4) and (6 == 2)      #False
+or                          (1 == 2) or (2 == 2)       #True
+not                         (1 == 1) and not (2 == 1)  #True
+<<      Rotate left         (1 << 3)   #8
+<<      Rotate right        (127 >> 6) #1
 
 
 
@@ -59,18 +85,19 @@ if a == 0:
 elif a >= 2:
     print('Due o più')
 elif a != -4:
-	print('Non meno quattro')
+    print('Non meno quattro')
 else:
     print('Something else')
 
-
-if a==0 and b==1: # and or !
+if (a==0 and b==1): # and or !
     print('si')
+
+
 
 
 for i in 'hello':
     print('Lettera' + i)  #h, e, l, l, o
-    
+
 names = ['John','Monica','Steven','Robin']
 for i in names:
     print('Hello ' + i)
