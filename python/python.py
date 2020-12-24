@@ -154,6 +154,16 @@ print(lista[1])      #scrive 8
 print(lista.pop(1))  #scrive 8, poi l'elemento viene rimosso
 lista.append('cucu') #aggiunge l'elemento 'cucu' alla lista
 lista.remove('test') #viene rimosso l'elemento 'test' dalla lista
+lista=[]
+lista.append(839)
+lista.append(994)
+lista.append(100)
+print(len(lista))    #scrive 3
+for y in lista:
+    print(y)
+for y in range(0,len(lista)): #y assume valori 0,1,2
+    print(lista[y])
+	
 
 
 dizionario = {1:'mutabile', 44:9988, 'chiave':'valore'}
