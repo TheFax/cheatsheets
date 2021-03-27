@@ -1,7 +1,10 @@
 #!/bin/bash
 
-#Dependencies:
+# Dependencies:
 # apt-get install curl
+
+# Example:
+# ./telegram_send.sh "This is my message"
 
 TOKEN="YOUR_TOKEN"
 CHAT_ID="YOUR_CHAT_ID"
