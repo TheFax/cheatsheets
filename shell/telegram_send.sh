@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Dependencies:
+# apt-get install curl
+
 TOKEN="YOUR_TOKEN"
 CHAT_ID="YOUR_CHAT_ID"
 MESSAGE=$*
