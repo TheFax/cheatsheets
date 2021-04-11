@@ -6,3 +6,6 @@ Download the packages to a folder
 
 Install requirements using your folder as source
     pip install -r requirements.txt --find-links=path_to_the_folder
+
+Install requirements using internet as source
+    pip install -r requirements.txt
