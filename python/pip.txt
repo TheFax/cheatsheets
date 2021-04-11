@@ -1,0 +1,8 @@
+Get the requirements
+    pip freeze>requirements.txt
+
+Download the packages to a folder
+    pip download -r requirements.txt -d path_to_the_folder
+
+Install requirements using your folder as source
+    pip install -r requirements.txt --find-links=path_to_the_folder
