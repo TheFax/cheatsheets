@@ -15,15 +15,30 @@
     //Richiedo dei dati da uno script o da un'altra pagina
     function wget_via_javascript() {
         var request = new XMLHttpRequest();
+        
+        request.timeout = 1300; //milliseconds
+        
         request.open('GET', 'pagina.php', true);
+        
         request.onload = function() {
                 console.log('Ricevuta risposta: ' + this.response);
-        }
+        };
+        
+        request.ontimeout = function (e) {
+                console.log('Ricevuta risposta: ' + this.response);
+        };
+        
         request.send();
+        
         console.log( Date() + ' - Eseguita richiesta.' );
     }
     
     //Richiamo automatico di una funzione
     setInterval(funzione_da_richiamare, 1000);  //La funzione sarà richiamata ogni 1000ms, infinite volte
     setInterval(funzione_da_richiamare, 1000, Param1, Param2);   //Se la funzione ha parametri, vanno specificati così
+    
+    Date();                                                       ----> stringa "Fri Jun 11 2021 14:41:27 GMT+0200 (Ora legale dell’Europa centrale)"
+    Date.now();                                                   ----> numero 1623415127603
+    Date().toString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");   ----> stringa "14:40:38"
+    
 </script>
