@@ -55,6 +55,15 @@ print("Lenght:" , len('Python'))       #6
 print("Sorted:" , sorted('Python'))    #['P', 'h', 'n', 'o', 't', 'y']
 inputString = input('Enter a string:')
 
+my_long_int = 42_435_453
+print('{:-012}'.format(my_long_int))   #000042435453
+print('{:-12}'.format(my_long_int))    #    42435453
+print('{:-4}'.format(my_long_int))     #42435453
+
+my_float = 4.1901829308544
+print('{:2.1f}'.format(my_float))      #4.2
+print('{:2.39f}'.format(my_float))     #4.190182930854399856457348505500704050064 (Si inventa i numeri sto povero!)
+
 
 
 
