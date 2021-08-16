@@ -197,3 +197,14 @@ x=dir(random)   #magic happens here ;-)
 for y in x:
     print(y)
 
+#Inoltre, per quanto riguarda metodi e variabili nelle classi
+class MyClass():
+    def __init__(self):
+        self.__superprivate = "Hello"
+        self._semiprivate = ", world!"
+mc = MyClass()
+print (mc.__dict__)
+{'_MyClass__superprivate': 'Hello', '_semiprivate': ', world!'}
+
+
+.
