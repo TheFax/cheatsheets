@@ -2,6 +2,8 @@ class telegram():
     import requests
     import json
 
+    version = 2
+    
     telegram_api_token = ""
     telegram_chat_id = ""
     options = "parse_mode=html&"
