@@ -172,8 +172,14 @@ for y in lista:
     print(y)
 for y in range(0,len(lista)): #y assume valori 0,1,2
     print(lista[y])
-	
 
+lista = [[1,2],[3,4],[5,6]]
+q=[z[0] for z in x]
+print(q)      #[1, 3, 5]
+q=[z[0] for z in x[-2:]]
+print(q)      #[3, 5]
+q=[z[0] for z in x[2:]]
+print(q)      #[5]
 
 dizionario = {1:'mutabile', 44:9988, 'chiave':'valore'}
 print(dizionario['chiave'])               #valore
