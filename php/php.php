@@ -317,9 +317,18 @@ foreach($arr as $key => $value) {
 <?php
 class foo
 {
-    function do_foo()
+    //public: Public method can be accessed from outside the class.
+    //private: It has no access is granted from outside the class.
+	public $name = "Game of Thrones";
+    
+    function __construct()
     {
-        echo "Doing foo."; 
+	    $this->name = "Another game";    
+    }
+    
+	function do_foo()
+    {
+        return $this->name;
     }
 }
 
