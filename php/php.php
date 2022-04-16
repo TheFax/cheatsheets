@@ -1,6 +1,17 @@
 Credit titoli ascii: http://patorjk.com/software/taag/#p=display&f=Big&t=Cookies%0A
 
 
+  _____  _    _ _____  
+ |  __ \| |  | |  __ \ 
+ | |__) | |__| | |__) |
+ |  ___/|  __  |  ___/ 
+ | |    | |  | | |     
+ |_|    |_|  |_|_| 
+
+//Visualizzo gli errori, casomai fossero disattivati da file ini
+ini_set('display_errors', 1);
+
+
 
   __  __       _   _                          _   _          
  |  \/  |     | | | |                        | | (_)         
@@ -93,24 +104,13 @@ for ($i = 1; $i <= 10; $i++) {
     echo rand(100,150) . '<br>';
 }	
 
-
-     /\                         
-    /  \   _ __ _ __ __ _ _   _ 
-   / /\ \ | '__| '__/ _` | | | |
-  / ____ \| |  | | | (_| | |_| |
- /_/    \_\_|  |_|  \__,_|\__, |
-                           __/ |
-                          |___/ 
-
-foreach ($array as $elemento_array) {
-	$elemento_array=1;
-}
+foreach($array as $elemento_array) {
+    echo $elemento_array;
+}    
 
 foreach($_POST as $key => $value) {
   echo "POST parameter '$key' has '$value'";
 }
-
-
 
    _____ ______ _______          _____   ____   _____ _______ 
   / ____|  ____|__   __|        |  __ \ / __ \ / ____|__   __|
@@ -122,8 +122,6 @@ foreach($_POST as $key => $value) {
 echo "Hai passato l'elemento POST id uguale a: " . $_POST['id'] ;
 echo "Hai passato l'elemento GET quantity uguale a: " . $_GET['quantity'] ;
 
-
-	
 
 
    _____            _    _           
@@ -179,7 +177,8 @@ switch ($cibo) {
  | |  | |/ _` | __/ _ \
  | |__| | (_| | ||  __/
  |_____/ \__,_|\__\___|
-                       
+
+date_default_timezone_set('Europe/Rome');
 $now = date("d-m-Y H:i:s");
 echo $now;
 
@@ -327,3 +326,17 @@ class foo
 $bar = new foo;
 $bar->do_foo();
 ?>
+
+
+	
+   _____ _        _             _          
+  / ____| |      (_)           | |         
+ | (___ | |_ _ __ _ _ __   __ _| |__   ___ 
+  \___ \| __| '__| | '_ \ / _` | '_ \ / _ \
+  ____) | |_| |  | | | | | (_| | | | |  __/
+ |_____/ \__|_|  |_|_| |_|\__, |_| |_|\___|
+                           __/ |           
+                          |___/
+	
+//Tolgo spazi e tabulazioni da una stringa qualsiasi: nota bene che str_replace() non sempre funziona!
+$stringa = preg_replace('/\s+/', '', $stringa);
