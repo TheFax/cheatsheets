@@ -4,6 +4,10 @@ math.cos()
 from math import cos
 cos()
 
+>>> import math
+>>> dir(math)
+['__doc__', '__name__', '__package__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'hypot', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'trunc']
+
 import random
 int_rnd   = random.randint(1,10)  #1   - 10     es: 8
 float_rnd = random.random()       #0.0 - 1.0    es: 0.368355385865348
