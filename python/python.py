@@ -201,6 +201,16 @@ for x in tupla/lista/dizionario:
 
 del tupla/lista/dizionario    #elimina la variabile liberando memoria
 
+#SET
+#I set si usano quando si vuole collezionare un set di dati. Non sono indicizzati. Non si possono memorizzare dati doppi.
+#I dati sono mutabili.
+thisset = {"apple", "banana", "cherry", "apple"}   #apple verrà memorizzata una volta solo.
+thisset.add("topo")
+thisset.remove("apple")
+print(thisset)
+if ("topo" in thisset):
+   print(":-)")
+
 
 #Visualizza tutte i metodi di una libreria
 import random
