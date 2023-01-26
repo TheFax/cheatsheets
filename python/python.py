@@ -8,6 +8,10 @@ import math
 dir(math)           #['__doc__', '__name__', '__package__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'hypot', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'trunc']
 math.cos.__doc__    #'Return the cosine of x (measured in radians).'
 
+dir()
+globals()
+locals()
+
 
 import random
 int_rnd   = random.randint(1,10)  #1   - 10     es: 8
